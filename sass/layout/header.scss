@@ -1,0 +1,25 @@
+.header{
+    &__container{
+        height: 40px;
+        background-color: #111111;
+    }
+    &__content{
+        height: 40px;
+        padding: 7.5px 0px;
+    }
+
+    &__right{
+        height: 100%;
+    }
+}
+
+.box{
+    height: 100%;
+}
+
+.login{
+
+    &__container{
+        height: 100%;
+    }
+}
