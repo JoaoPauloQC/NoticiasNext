@@ -2,4 +2,6 @@
 @use 'variables/fonts.scss';
 @use 'components/newcard.scss';
 @use 'sections/home.scss';
-@use 'layout/header.scss'
+@use 'layout/header.scss';
+@use 'sections/login.scss';
+@use 'components/loginform.scss';

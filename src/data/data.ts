@@ -1,4 +1,6 @@
 import { title } from "process";
+import { user } from "@/app/page"
+
 
 type thenew = {
 
@@ -40,7 +42,7 @@ const noticia4: thenew = {
     title :'IA pode acabar com até 92 milhões de empregos',
     category : 'tecnologia', 
     link : 'https://g1.globo.com/trabalho-e-carreira/noticia/2025/07/13/ia-pode-eliminar-ate-92-milhoes-de-empregos-mas-essas-profissoes-devem-sobreviver.ghtml',
-    img :   'https://s2-g1.glbimg.com/KGrnH-rnrj1WYMXeKVnWwxT0VmE=/0x0:1200x525/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/x/b/dWwp2RQwO4fogDeOmvSQ/72575862-1004-1-.webp'],
+    img :   'https://s2-g1.glbimg.com/KGrnH-rnrj1WYMXeKVnWwxT0VmE=/0x0:1200x525/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/x/b/dWwp2RQwO4fogDeOmvSQ/72575862-1004-1-.webp',
 }
 
 let news : thenew[] = []; 

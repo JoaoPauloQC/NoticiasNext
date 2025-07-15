@@ -1,6 +1,10 @@
 import News from "@/components/News";
 import Image from "next/image";
+import { title } from "process";
 
+export const metadata = {
+  title: "Home"
+}
 
 
 export default function Home() {

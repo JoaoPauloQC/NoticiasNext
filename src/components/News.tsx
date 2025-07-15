@@ -6,7 +6,7 @@ export default function News(){
     
 
     return (
-        <div className='grid grid-cols-3 pt-45'>
+        <div className='grid grid-cols-3 gap-y-20 pt-45'>
             
             {news.map(n =>
 

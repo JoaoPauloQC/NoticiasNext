@@ -1,4 +1,4 @@
-"use client"
+
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -6,6 +6,7 @@ import "../../css/main.css";
 import "./globals.css"
 import { Header } from "@/sections/Header";
 import { useEffect, useState } from "react";
+import { UserProvider } from "@/components/Context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,21 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const [user, setUser] = useState("Guest")
-  const [isLogged, setisLogged] = useState(false)
+  
 
-  function definingUser(name:string) {
-
-    isLogged?  () => setUser(name) : () => setUser("Guest");
-
-  }
-
-  useEffect
+  
 
 
   return (
     <html lang="en">
       <head>
+        <title></title>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
@@ -47,8 +42,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <Header />
+      <UserProvider>
+        <Header/>
         {children}
+      </UserProvider>
       </body>
     </html>
   );
