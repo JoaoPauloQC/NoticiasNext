@@ -1,5 +1,3 @@
-import { title } from "process";
-import { user } from "@/app/page"
 
 
 type thenew = {
@@ -17,7 +15,7 @@ export type { thenew }
 
 const noticia1: thenew = {
      title:"PSG ganha do Real Madrid no mundial de clubes" ,
-     category : "sport", 
+     category : 'sport', 
      link :"https://ge.globo.com/futebol/mundial-de-clubes/jogo/09-07-2025/parissaintgermain-realmadrid.ghtml",
      img : "https://s2-ge.glbimg.com/b85_kU9Q-rgnmphZTQ1NmIN3pJc=/0x0:4783x2691/640x360/smart/https://i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2025/z/v/5c5UghRhuOlS7rzQtYgQ/gettyimages-2224327324.jpg"
 }

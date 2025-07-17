@@ -4,7 +4,7 @@ export const metadata = {
     title: "Login"
 }
 
-export const Login = () =>{
+export default function Login(){
 
 
     return (
@@ -17,4 +17,3 @@ export const Login = () =>{
 
 }
 
-export default Login

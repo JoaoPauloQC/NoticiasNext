@@ -18,7 +18,7 @@ export const LoginContent = () => {
 
 
 
-    const handlesubmit = (e: MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const handlesubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault()
         const gettingimg = async () =>{
             const data = await fetch(`https://api.github.com/users/${user}`).then(res => res.json()).then(data => data) 
