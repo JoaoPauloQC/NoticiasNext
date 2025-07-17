@@ -13,14 +13,25 @@ export const metadata = {
 export const LoginContent = () => {
 
     const {user, setUser} = useUser()
+    const {img,setImg} = useUser()
     const router = useRouter()
 
 
 
     const handlesubmit = (e: MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault()
-        router.push("/")
+        const gettingimg = async () =>{
+            const data = await fetch(`https://api.github.com/users/${user}`).then(res => res.json()).then(data => data) 
+            console.log(data)
+            console.log(data.avatar_url)  
+            setImg(data.avatar_url)   
+            console.log(img)      
+            
 
+        }
+        gettingimg()
+        router.push("/")
+        
     }
     const handlechange = (e: ChangeEvent<HTMLInputElement>) => {
         setUser(e.target.value)

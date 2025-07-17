@@ -12,19 +12,19 @@ type Props = {
 
 export const Header = () => {
     const {user,setUser} = useUser()
-    
+    const {img, setImg} = useUser()
 
 
     return (
         
-        <div className="header__container h-2">
+        <div className="header__container">
             <div className="wrapper">
-                <div className="header__content flex justify-between">
+                <div className="header__content flex justify-between ">
                     <div className="header__left">
 
                     </div>
                     <div className="header__right">
-                        <Login user={user} />
+                        <Login user={user} img={img}/>
                     </div>
                 </div>
 
