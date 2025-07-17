@@ -1,0 +1,39 @@
+$animation-time: 0.7s;
+$percentage: 8%;
+
+.filter{
+    &__buttons {
+
+        font-family: Montserrat;
+        &__sport{
+            background-color: green;
+            transition: all $animation-time;
+            &:hover{
+                background-color: darken(#008000, $percentage);
+            }
+        }
+        &__economia{
+            background-color: yellowgreen;
+            transition: all $animation-time;
+            &:hover{
+                background-color: darken(#9acd32, $percentage);
+            }
+        }
+        &__tecnologia{
+            background-color: aqua;
+            transition: all $animation-time;
+            &:hover{
+                background-color: darken(#00ffff, $percentage);
+            }
+        }
+        &__geral{
+            background-color: rgb(49, 0, 0);
+            transition: all $animation-time;
+            &:hover{
+                background-color: darken(rgb(49, 0, 0), $percentage);
+            }
+        }
+
+
+    }
+}

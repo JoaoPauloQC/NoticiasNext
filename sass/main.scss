@@ -1,7 +1,21 @@
+// Generic things
 @use 'generics/generic.scss';
+
+
+// Variables
 @use 'variables/fonts.scss';
-@use 'components/newcard.scss';
-@use 'sections/home.scss';
+
+
+// Base Layout
 @use 'layout/header.scss';
+
+
+// Sections
+@use 'sections/home.scss';
 @use 'sections/login.scss';
+
+
+// Components 
+@use 'components/newcard.scss';
 @use 'components/loginform.scss';
+@use 'components/filterbuttons.scss';

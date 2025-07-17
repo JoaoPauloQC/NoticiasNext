@@ -13,6 +13,8 @@ type thenew = {
 export type { thenew }
 
 
+
+
 const noticia1: thenew = {
      title:"PSG ganha do Real Madrid no mundial de clubes" ,
      category : 'sport', 
@@ -52,6 +54,16 @@ news.push(noticia2)
 news.push(noticia3)
 
 news.push(noticia4)
+
+let categories: string[] = []
+for (let n of news) {
+    if (!categories.includes(n.category)){
+        categories.push(n.category)
+    }
+}
+
+export { categories }
+
 export { news }
 
    

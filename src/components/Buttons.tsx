@@ -10,7 +10,7 @@ type ButtonProps = {
 export const Button = ({children,animation,className,...props}: ButtonProps) => {
 
     return (
-        <button className={className + " " + animation} {...props}>
+        <button className={className + " cursor-pointer " + (animation? animation : "")} {...props}>
             {children}
         </button>
     )

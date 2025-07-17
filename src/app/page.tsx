@@ -1,3 +1,4 @@
+import FilterNews from "@/components/FilterNews";
 import News from "@/components/News";
 import Image from "next/image";
 import { title } from "process";
@@ -15,7 +16,10 @@ export default function Home() {
           <div className="home__text pt-30">
             Notícias Relevantes
           </div>
-          <News />
+          <FilterNews>
+            
+          </FilterNews>
+         
 
 
         </div>

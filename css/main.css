@@ -4,6 +4,42 @@
   margin-right: auto;
 }
 
+.header__container {
+  height: 60px;
+  background-color: #111111;
+  display: flex;
+  align-items: center;
+}
+.header__content {
+  width: 1200px;
+  height: 50px;
+  padding: 7.5px 0px;
+}
+.header__right {
+  height: 100%;
+}
+
+.box {
+  height: 100%;
+  color: #111111;
+  font-family: Poppins;
+  font-size: 0.85rem;
+  padding: 10px;
+}
+
+.login__container {
+  height: 100%;
+}
+
+.home__text {
+  font-family: Poppins;
+  text-align: center;
+}
+
+.login__space {
+  height: 80vh;
+}
+
 .news__card {
   display: grid;
   width: 300px;
@@ -45,45 +81,41 @@
   color: #0b0b0b;
 }
 
-.home__text {
-  font-family: Poppins;
-  text-align: center;
-}
-
-.header__container {
-  height: 60px;
-  background-color: #111111;
-  display: flex;
-  align-items: center;
-}
-.header__content {
-  width: 1200px;
-  height: 50px;
-  padding: 7.5px 0px;
-}
-.header__right {
-  height: 100%;
-}
-
-.box {
-  height: 100%;
-  color: #111111;
-  font-family: Poppins;
-  font-size: 0.85rem;
-  padding: 10px;
-}
-
-.login__container {
-  height: 100%;
-}
-
-.login__space {
-  height: 80vh;
-}
-
 .login__form__container input {
   color: black;
   font-family: Poppins;
+}
+
+.filter__buttons {
+  font-family: Montserrat;
+}
+.filter__buttons__sport {
+  background-color: green;
+  transition: all 0.7s;
+}
+.filter__buttons__sport:hover {
+  background-color: rgb(0, 87.2, 0);
+}
+.filter__buttons__economia {
+  background-color: yellowgreen;
+  transition: all 0.7s;
+}
+.filter__buttons__economia:hover {
+  background-color: rgb(129.36, 172.2, 42);
+}
+.filter__buttons__tecnologia {
+  background-color: aqua;
+  transition: all 0.7s;
+}
+.filter__buttons__tecnologia:hover {
+  background-color: rgb(0, 214.2, 214.2);
+}
+.filter__buttons__geral {
+  background-color: rgb(49, 0, 0);
+  transition: all 0.7s;
+}
+.filter__buttons__geral:hover {
+  background-color: rgb(8.2, 0, 0);
 }
 
 /*# sourceMappingURL=main.css.map */

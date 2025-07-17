@@ -42,7 +42,7 @@ export const LoginContent = () => {
 
         <div className="login__space flex justify-center items-center content-center">
         <div className="login__form__container bg-neutral-500 rounded-xs h-60  p-10 w-3xs gap-8 flex flex-col justify-center">
-            <input className="rounded-2xl bg-neutral-300 px-3 py-1 outline-0 " placeholder="Nome" onChange={handlechange} type="text" name="name"  />
+            <input className="rounded-lg bg-neutral-300 px-3 py-1 outline-0 " placeholder="Nome" onChange={handlechange} type="text" name="name"  />
             <Button className="cursor-pointer rounded-md bg-neutral-800 p-1 w-25 self-center" onClick={handlesubmit}>Enviar</Button>
         </div>
         </div>
