@@ -7,7 +7,7 @@ export const ChatGPT = () => {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
-                "Authorization": "Bearer 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",
+                "Authorization": "Bearer ",
 
             },
             body: JSON.stringify({
