@@ -12,8 +12,46 @@ type thenew = {
 
 export type { thenew }
 
+type socialMedia = {
+    name : string,
+    link: string,
+    icon: string,
+    avatar?: string,
+}
 
+const github: socialMedia = {
+    name: "Github",
+    link: "https://github.com/JoaoPauloQC",
+    icon: "/icons/github.png"
+}
 
+const instagram: socialMedia = {
+    name: "Instagram",
+    link: "https://www.instagram.com/joao.pqc/",
+    icon: "/icons/instagram.svg"
+}
+
+const linkedIn: socialMedia = {
+    name: "LinkedIn" ,
+    link: "https://www.linkedin.com/in/jo%C3%A3o-paulo-queiroz-costa-2b784a358",
+    icon: "/icons/linkedin.svg"
+}
+
+const whatsapp: socialMedia = {
+    name: "WhatsApp",
+    link: "https://wa.me/5511950806063",
+    icon: "/icons/whatsapp.svg"
+}
+
+let socialMedias: socialMedia[] = []
+
+socialMedias.push(github)
+socialMedias.push(instagram)
+socialMedias.push(linkedIn)
+socialMedias.push(whatsapp)
+
+export type { socialMedia }
+export { socialMedias }
 
 const noticia1: thenew = {
      title:"PSG ganha do Real Madrid no mundial de clubes" ,

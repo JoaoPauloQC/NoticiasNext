@@ -6,7 +6,8 @@ import "../../css/main.css";
 import "./globals.css"
 import { Header } from "@/sections/Header";
 import { useEffect, useState } from "react";
-import { UserProvider } from "@/components/Context";
+import { UserProvider } from "@/data/Context";
+import Footer from "@/sections/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +49,7 @@ export default function RootLayout({
       <UserProvider>
         <Header/>
         {children}
+        <Footer/>
       </UserProvider>
       </body>
     </html>

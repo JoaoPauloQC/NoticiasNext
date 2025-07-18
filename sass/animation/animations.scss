@@ -1,0 +1,27 @@
+@keyframes logocolor {
+    0%{
+        color: #00ffe0 ;
+        font-family: Poppins;
+    }
+    25%{
+        font-family: 'Times New Roman', Times, serif;
+    }
+    50%{
+        color: #fff;
+        font-family: Montserrat;
+    }
+    75%{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    100%{
+        color: #00ffe0 ;
+        font-family: Poppins;
+    }
+}
+
+
+.animation{
+    &__logocolor{
+        animation: logocolor 2s ease-in infinite;
+    }
+}

@@ -1,8 +1,9 @@
 "use client"
 
-import { useUser } from "@/components/Context"
-import Login from "@/components/Login"
+import { useUser } from "@/data/Context"
+import Login from "@/areas/Login"
 import Link from "next/link"
+import { Logo } from "@/components/Logo"
 
 type Props = {
 
@@ -21,7 +22,7 @@ export const Header = () => {
             <div className="wrapper">
                 <div className="header__content flex justify-between ">
                     <div className="header__left">
-
+                    <Logo></Logo>
                     </div>
                     <div className="header__right">
                         <Login user={user} img={img}/>

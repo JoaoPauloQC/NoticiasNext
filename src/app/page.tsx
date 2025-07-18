@@ -1,4 +1,4 @@
-import FilterNews from "@/components/FilterNews";
+import FilterNews from "@/areas/FilterNews";
 import News from "@/components/News";
 import Image from "next/image";
 import { title } from "process";

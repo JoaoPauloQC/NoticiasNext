@@ -1,6 +1,6 @@
 "use client"
 
-import { useUser } from "@/components/Context"
+import { useUser } from "@/data/Context"
 import { useRouter } from "next/navigation"
 import { title } from "process"
 import { MouseEvent,ChangeEvent, useState } from "react"

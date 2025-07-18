@@ -1,9 +1,9 @@
 "use client"
 
 import { categories , news } from "@/data/data"
-import { Button } from "./Buttons"
+import { Button } from "../components/Buttons"
 import { useEffect, useState } from "react"
-import News from "./News"
+import News from "../components/News"
 
 export default function FilterNews() {
     
