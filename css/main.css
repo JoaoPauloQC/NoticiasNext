@@ -118,6 +118,12 @@
   background-color: rgb(8.2, 0, 0);
 }
 
+.CHATGPT__button {
+  color: #fff;
+  font-family: Roboto;
+  font-weight: 550;
+}
+
 @keyframes logocolor {
   0% {
     color: #00ffe0;
@@ -140,6 +146,21 @@
 }
 .animation__logocolor {
   animation: logocolor 2s ease-in infinite;
+}
+
+@keyframes chatgptbtn {
+  0% {
+    background-color: #007E22;
+  }
+  50% {
+    background-color: #004613;
+  }
+  100% {
+    background-color: #007E22;
+  }
+}
+.animation__chatgptbtn {
+  animation: chatgptbtn 3s linear infinite;
 }
 
 /*# sourceMappingURL=main.css.map */

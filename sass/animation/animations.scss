@@ -25,3 +25,28 @@
         animation: logocolor 2s ease-in infinite;
     }
 }
+
+
+@mixin backgroundcolortransition ($color1, $color2 , $name) {
+
+    @keyframes #{$name} {
+        0% {
+            background-color: $color1
+
+        }
+        50%{
+            background-color: $color2
+        }
+
+        100%{
+            background-color: $color1;
+        }
+    }
+    .animation{
+        &__#{$name} {
+        animation: #{$name} 3s linear infinite;
+    }
+    }
+}
+
+@include backgroundcolortransition(#007E22,#004613, chatgptbtn)

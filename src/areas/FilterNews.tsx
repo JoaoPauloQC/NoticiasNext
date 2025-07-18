@@ -4,6 +4,7 @@ import { categories , news } from "@/data/data"
 import { Button } from "../components/Buttons"
 import { useEffect, useState } from "react"
 import News from "../components/News"
+import ChatGPTArea from "./ChatGPTArea"
 
 export default function FilterNews() {
     
@@ -35,6 +36,7 @@ export default function FilterNews() {
             )}
             </div>
             <News news={filterednews}></News>
+            <ChatGPTArea />
         </div>
 
             
