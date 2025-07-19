@@ -1,3 +1,6 @@
+@use '../variables/responsive.scss';
+
+
 .header{
     &__container{
         height: 60px;
@@ -6,9 +9,15 @@
         align-items: center;
     }
     &__content{
-        width: 1200px;
+       
         height: 50px;
         padding: 7.5px 0px;
+        @include responsive.responsive(responsive.$laptop) {
+
+            padding: 10px;
+            width: 100%;
+
+        }
     }
 
     &__right{

@@ -1,0 +1,10 @@
+$mobile: 768px;
+$laptop: 1000px;
+
+@mixin responsive ($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+

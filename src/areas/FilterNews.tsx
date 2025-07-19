@@ -5,6 +5,8 @@ import { Button } from "../components/Buttons"
 import { useEffect, useState } from "react"
 import News from "../components/News"
 import ChatGPTArea from "./ChatGPTArea"
+import GeminiArea from "./GeminiArea"
+import AIArea from "./AIArea"
 
 export default function FilterNews() {
     
@@ -29,22 +31,15 @@ export default function FilterNews() {
     return (
 
         <div className="news_all pt-32">
-            <div className="filter__buttons flex gap-10">
+            <div className="filter__buttons flex gap-10 max-lg:px-10 max-lg:flex-wrap max-lg: justify-center">
             <Button className={"bg-amber-700 p-1.5 rounded-xl min-w-24 text-center"} onClick={() => setCategory("all")}>Todas</Button>
             {categories.map(c => 
                 <Button className={`${"filter__buttons__"+ c} p-1.5 rounded-xl min-w-24 text-center`} value={c} onClick={() => setCategory(c)}>{capitalizing(c)}</Button>
             )}
             </div>
             <News news={filterednews}></News>
-            <ChatGPTArea />
+            <AIArea></AIArea>
         </div>
-
-            
-
-
-
-
-
     )
 
 
