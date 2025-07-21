@@ -1,4 +1,5 @@
 import FilterNews from "@/areas/FilterNews";
+import GuessingWArea from "@/areas/GuessingWArea";
 import News from "@/components/News";
 import Image from "next/image";
 import { title } from "process";
@@ -19,7 +20,7 @@ export default function Home() {
           <FilterNews>
             
           </FilterNews>
-         
+          <GuessingWArea></GuessingWArea>
 
 
         </div>
