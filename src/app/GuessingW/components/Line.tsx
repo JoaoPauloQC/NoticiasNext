@@ -6,10 +6,11 @@ type Props = {
     word : string,
     line: number,
     indexEnable: number,
-    
+    gameWon: number,
+    setGameWon: (n:number) => void,
 }
 
-export default function Line ({myword_splited, word,line, indexEnable} : Props){
+export default function Line ({gameWon,setGameWon,myword_splited, word,line, indexEnable} : Props){
     
     const [isLineFinished, setIsLineFinished] = useState(false)
     const HasOrNot = (e: ChangeEvent<HTMLInputElement>) => {
@@ -26,7 +27,7 @@ export default function Line ({myword_splited, word,line, indexEnable} : Props){
         <div className="flex">
             {myword_splited.map((c,i) => { return (
 
-                <Input  resp={resp} setResp={setResp} line={line} indexEnable={indexEnable} word={word} myword_splited={myword_splited} i={i}/>
+                <Input gameWon={gameWon} setGameWon={setGameWon} resp={resp} setResp={setResp} line={line} indexEnable={indexEnable} word={word} myword_splited={myword_splited} i={i}/>
 
             )})}
         </div>
