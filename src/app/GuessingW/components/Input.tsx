@@ -25,7 +25,7 @@ export default function Input ({myword_splited, word,line, indexEnable,resp, set
         }
         console.log("for some reason i am here")
     }
-    const UpdatingColor = (i) =>{
+    const UpdatingColor = (i : number) =>{
         if (line === indexEnable){
             return setIsThere(" bg-neutral-100")
         }
