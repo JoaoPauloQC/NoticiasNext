@@ -15,11 +15,12 @@ export const GuessingWGame = () => {
     
 
     return (
-        <>  
-        {Array(word.length).fill("").map((c,indexEnable) => 
-            <Line gameWon={gameWon} setGameWon={setGameWon} line={line} indexEnable={indexEnable} word={word} myword_splited={myword_splited}/>
-        )}
-
+        <>
+            <div className="GuessingW__inputs">  
+            {Array(word.length).fill("").map((c,indexEnable) => 
+                <Line gameWon={gameWon} setGameWon={setGameWon} line={line} indexEnable={indexEnable} word={word} myword_splited={myword_splited}/>
+            )}
+            </div>
             <Button onClick={() => { if(gameWon == 6){ console.log(gameWon); return setLine((line === myword_splited.length - 1)? 0 : line+1)}}} className="bg-neutral-600 rounded-2xl p-3 text-lg"> Veja </Button>
         </>
     )

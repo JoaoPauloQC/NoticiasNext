@@ -65,6 +65,6 @@ export default function Input ({gameWon,setGameWon,myword_splited, word,line, in
     useEffect(() => {UpdatingColor(i)},[line,gameWon])
     
     return(
-        <input type="text" disabled={indexEnable != line} value={resp[i]} onChange={(e: ChangeEvent<HTMLInputElement>) => {const newword = resp.map((c,index) => index == i? e.target.value : c) ;console.log(newword); setResp(newword);HasOrNot(e)}} className={"w-20 h-20 text-center    text-neutral-950 border-neutral-900 outline-none border-4 rounded-2xl " + (indexEnable === line? "" : "disabled cursor-not-allowed ") + (isThere)} />
+        <input type="text" disabled={indexEnable != line} value={resp[i]} onChange={(e: ChangeEvent<HTMLInputElement>) => {const newword = resp.map((c,index) => index == i? e.target.value : c) ;console.log(newword); setResp(newword);HasOrNot(e)}} className={"w-20 h-20 text-center    text-neutral-950 border-neutral-900 outline-none border-4 rounded-2xl max-sm:w-15 max-sm:h-15 " + (indexEnable === line? "" : "disabled cursor-not-allowed ") + (isThere)} />
     )
 }

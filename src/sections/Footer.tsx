@@ -8,7 +8,7 @@ export default function Footer() {
                             <div className="footer__left grid gap-10 max-lg:px-2">
                             <SocialMedias></SocialMedias>
                             </div>
-                            <div className="footer__right flex items-center max-lg:text-lg max-lg:px-4 py-5 text-center">
+                            <div className="footer__right flex items-center max-lg:text-lg max-lg:px-4 py-5 text-center max-lg:justify-center">
                                 <p> 2025 - Todos os Direitos Reservados - João Paulo Queiroz Costa </p>
                             </div>
                         </div>
