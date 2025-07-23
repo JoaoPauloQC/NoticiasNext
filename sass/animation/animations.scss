@@ -24,6 +24,24 @@
     &__logocolor{
         animation: logocolor 2s ease-in infinite;
     }
+    &__top-to-mid {
+        animation: top-to-mid 1.2s linear ;
+        animation-fill-mode: forwards;
+    }
+}
+
+
+@keyframes top-to-mid {
+
+    0%{
+        top:-35%;
+        transform: translateY(0)
+    }
+    100%{
+        top:50%;
+        transform: translateY(-50%)
+    }
+
 }
 
 

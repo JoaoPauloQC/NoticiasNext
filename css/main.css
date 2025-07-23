@@ -46,6 +46,11 @@
   height: 80vh;
 }
 
+.GuessingW__PopUp {
+  position: absolute;
+  top: 0%;
+}
+
 .news__card {
   display: grid;
   width: 300px;
@@ -153,7 +158,21 @@
 .animation__logocolor {
   animation: logocolor 2s ease-in infinite;
 }
+.animation__top-to-mid {
+  animation: top-to-mid 1.2s linear;
+  animation-fill-mode: forwards;
+}
 
+@keyframes top-to-mid {
+  0% {
+    top: -35%;
+    transform: translateY(0);
+  }
+  100% {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 @keyframes chatgptbtn {
   0% {
     background-color: #007E22;

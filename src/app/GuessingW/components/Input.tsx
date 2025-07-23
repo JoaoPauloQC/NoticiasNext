@@ -61,10 +61,27 @@ export default function Input ({gameWon,setGameWon,myword_splited, word,line, in
     
 
     
-    
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        let inputValue = ""
+        if (e.target.value.length == 0){
+            inputValue = ""
+            console.log("here")
+        }
+        else{
+            inputValue = e.target.value[(e.target.value.length != undefined)? e.target.value.length-1 : 0 ]
+            console.log(inputValue)
+        }
+        console.log(inputValue)
+        
+        const newword = resp.map((c,index) => index == i? inputValue : c)
+        console.log(newword) 
+        setResp(newword)
+        HasOrNot(e)
+    }
+
     useEffect(() => {UpdatingColor(i)},[line,gameWon])
     
     return(
-        <input type="text" disabled={indexEnable != line} value={resp[i]} onChange={(e: ChangeEvent<HTMLInputElement>) => {const newword = resp.map((c,index) => index == i? e.target.value : c) ;console.log(newword); setResp(newword);HasOrNot(e)}} className={"w-20 h-20 text-center    text-neutral-950 border-neutral-900 outline-none border-4 rounded-2xl max-sm:w-15 max-sm:h-15 " + (indexEnable === line? "" : "disabled cursor-not-allowed ") + (isThere)} />
+        <input type="text" disabled={indexEnable != line} value={resp[i] ? resp[i] : ""} onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)} className={"w-20 h-20 text-center text-3xl   text-neutral-950 border-neutral-900 outline-none border-4 rounded-2xl max-sm:w-15 max-sm:h-15 " + (indexEnable === line? "" : "disabled cursor-not-allowed ") + (isThere)} />
     )
 }
