@@ -1,13 +1,25 @@
 "use client"
 
+import { GoogleGenAI } from "@google/genai";
 import { Button } from "@/components/Buttons"
 import { ChangeEvent, use, useEffect, useState } from "react"
 import Line from "./components/Line"
 import GameOverPopUp from "./components/GameOverPopUp"
-
+const ai = new GoogleGenAI({ apiKey:  "AIzaSyARvRcP6bNEWli5YRZLNKPXb-OagJsqEbU" })
 export const GuessingWGame = () => {
+    
+    async function AI (){
+    const response = await ai.models.generateContent({
+        model: "gemini-2.5-flash",
+        contents: "Me fale uma palavra aleatoria que contenha somente 5 letras, a mensagem deverá ser somente a palavra, como neste exemplo: bingo",
+    })
+    console.log(response.text)
+    setword(response.text);
+    }
 
-    const [word, setword] = useState('bingo')
+    
+    const [word, setword] = useState("a")
+    useEffect(()=> {AI()},[])
     const myword_splited = word.split("")
     const [line,setLine] = useState(0)
     const [gameWon, setGameWon] = useState(word.length+1)
