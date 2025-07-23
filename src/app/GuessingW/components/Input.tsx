@@ -19,7 +19,7 @@ export default function Input ({gameWon,setGameWon,myword_splited, word,line, in
     
     const HasOrNot = (e: ChangeEvent<HTMLInputElement>) => {
         const response = e.target.value
-        console.log()
+        
         if (indexEnable < line){
             if (myword_splited.includes(response)){
                 return setIsThere("bg-green")
@@ -29,7 +29,7 @@ export default function Input ({gameWon,setGameWon,myword_splited, word,line, in
         console.log("for some reason i am here")
     }
     const UpdatingColor = (i : number) =>{
-        console.log(i)
+        console.log("Array number = " + i)
         if (indexEnable > gameWon){
             return setIsThere(" bg-neutral-500")
         }
@@ -41,20 +41,20 @@ export default function Input ({gameWon,setGameWon,myword_splited, word,line, in
         }
         else if (indexEnable < line){
             if (myword_splited.includes(resp[i])){
-                console.log(resp[2], myword_splited)
+                console.log("Resp[2] = " + resp[2],"MyWord = "+ myword_splited)
                 console.log(resp.join(""),myword_splited.join(""),resp.join("") == myword_splited.join(""))
-                    if (resp.join("") == myword_splited.join("")){
-                        console.log("where")
+                    if (resp.join("") === myword_splited.join("")){
+                        console.log("resp === myword_splited")
                         setGameWon(indexEnable)
                         
                     }
                     if (myword_splited[i] == resp[i]){
-                        return setIsThere(" bg-green-50")
+                        return setIsThere(" bg-green-300")
                     }
                     return setIsThere(" bg-yellow-300")
                 }
             
-                return setIsThere(" bg-red-100")    
+                return setIsThere(" bg-red-300")    
             }
             
         }   
@@ -69,12 +69,12 @@ export default function Input ({gameWon,setGameWon,myword_splited, word,line, in
         }
         else{
             inputValue = e.target.value[(e.target.value.length != undefined)? e.target.value.length-1 : 0 ]
-            console.log(inputValue)
+            
         }
-        console.log(inputValue)
+        console.log("input value: " ,inputValue)
         
         const newword = resp.map((c,index) => index == i? inputValue : c)
-        console.log(newword) 
+        console.log("Newword : ",newword) 
         setResp(newword)
         HasOrNot(e)
     }

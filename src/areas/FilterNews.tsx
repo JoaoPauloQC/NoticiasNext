@@ -10,11 +10,12 @@ import AIArea from "./AIArea"
 
 export default function FilterNews() {
     
+    const [gotnews,setNews] = useState(news)
     const [category, setCategory] = useState("")
-    const [filterednews, setfilteredNews] = useState(news)
+    const [filterednews, setfilteredNews] = useState(gotnews)
     useEffect(function(){
         if (category == "" || category == "all"){
-            setfilteredNews(news)
+            setfilteredNews(gotnews)
         }
         else{
             setfilteredNews(news.filter(n => n.category == category))
@@ -23,6 +24,7 @@ export default function FilterNews() {
         
 
     }, [category])
+    useEffect(()=> setfilteredNews(gotnews), [gotnews])
 
     const capitalizing = (name : string) => {
             return name[0].toUpperCase() + name.slice(1)
@@ -38,7 +40,7 @@ export default function FilterNews() {
             )}
             </div>
             <News news={filterednews}></News>
-            <AIArea></AIArea>
+            <AIArea setNews={setNews} news={gotnews}></AIArea>
         </div>
     )
 

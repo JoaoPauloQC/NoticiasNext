@@ -19,21 +19,22 @@ export const GuessingWGame = () => {
     }
 
     
-    const [word, setword] = useState("a")
+    const [word, setword] = useState("bingo")
     useEffect(()=> {AI()},[])
     const myword_splited = word.split("")
     const [line,setLine] = useState(0)
     const [gameWon, setGameWon] = useState(word.length+1)
     const [isPopUpVisible, setIsPopUpVisible] = useState(false)
     useEffect (()=> {console.log("gamewon: " + gameWon); line != 0? setLine(gameWon+1) : setLine(line)},[gameWon])
-    useEffect(()=> gameWon < 6? setLine(gameWon+1) : console.log("Line = " + line + " Pop is vsibible = " + isPopUpVisible) , [line])
+    useEffect(()=> gameWon < 6? setLine(gameWon+1) : console.log("Line = " + line + " Pop is visibible = " + isPopUpVisible) , [line])
     useEffect(()=> console.log(isPopUpVisible),[isPopUpVisible])
-
+    useEffect(()=>{setLine(0);setGameWon(word.length+1);console.log("Word useEffect")},[word])
     const handleclick = () =>{
         if(gameWon == 6){
             console.log(gameWon)
             if (line != word.length-1){
-                return setLine((line === myword_splited.length - 1)? 0 : line+1)
+                console.log("in if")
+                setLine((line === myword_splited.length - 1)? 0 : line+1)
             }
             else{
                 
