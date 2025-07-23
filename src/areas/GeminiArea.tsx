@@ -11,8 +11,6 @@ export default function GeminiArea({news,setNews}: Props) {
 
     const handleClick = async () =>{
         const respArray = await Gemini()
-        console.log("Resp array = ", await respArray)
-        console.log("Title should be: ", await respArray[0], typeof await respArray[0])
         const newNew : thenew = {
             title: respArray? respArray[0].trim() : "",
             category: respArray? respArray[1].trim() : "",
