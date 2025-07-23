@@ -5,6 +5,14 @@
   margin-right: auto;
 }
 
+.Montserrat {
+  font-family: Montserrat;
+}
+
+.Poppins {
+  font-family: Poppins;
+}
+
 .header__container {
   height: 60px;
   background-color: #111111;
@@ -46,6 +54,9 @@
   height: 80vh;
 }
 
+.GuessingW__Input {
+  font-family: Montserrat;
+}
 .GuessingW__PopUp {
   position: absolute;
   top: 0%;

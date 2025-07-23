@@ -1,7 +1,12 @@
 .GuessingW{
+    
+    &__Input{
+        font-family: Montserrat;
+    }
+    
     &__PopUp{
         position: absolute;
-        top:0%
+        top:0%;
 
     }
 }

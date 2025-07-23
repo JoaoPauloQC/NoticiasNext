@@ -82,6 +82,6 @@ export default function Input ({gameWon,setGameWon,myword_splited, word,line, in
     useEffect(() => {UpdatingColor(i)},[line,gameWon])
     
     return(
-        <input type="text" disabled={indexEnable != line} value={resp[i] ? resp[i] : ""} onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)} className={"w-20 h-20 text-center text-3xl   text-neutral-950 border-neutral-900 outline-none border-4 rounded-2xl max-sm:w-15 max-sm:h-15 " + (indexEnable === line? "" : "disabled cursor-not-allowed ") + (isThere)} />
+        <input type="text" disabled={indexEnable != line} value={resp[i] ? resp[i] : ""} onChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e)} className={"Montserrat w-20 h-20 text-center text-3xl   text-neutral-950 border-neutral-900 outline-none border-4 rounded-2xl caret-transparent max-sm:w-15 max-sm:h-15 " + (indexEnable === line? "" : "disabled cursor-not-allowed ") + (isThere)} />
     )
 }

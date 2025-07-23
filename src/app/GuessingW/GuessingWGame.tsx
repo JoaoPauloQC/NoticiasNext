@@ -38,7 +38,7 @@ export const GuessingWGame = () => {
                 <Line gameWon={gameWon} setGameWon={setGameWon} line={line} indexEnable={indexEnable} word={word} myword_splited={myword_splited}/>
             )}
             </div>
-            <Button onClick={() => handleclick()} className="bg-neutral-600 rounded-2xl p-3 text-lg"> Veja </Button>
+            <Button onClick={() => handleclick()} className="bg-neutral-600 rounded-2xl p-3 text-lg"> Tentar </Button>
             <GameOverPopUp isPopUpVisible={isPopUpVisible} setIsPopUpVisible={setIsPopUpVisible} />
         </>
     )
