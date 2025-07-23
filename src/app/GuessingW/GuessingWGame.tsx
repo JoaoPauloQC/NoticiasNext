@@ -13,8 +13,9 @@ export const GuessingWGame = () => {
         model: "gemini-2.5-flash",
         contents: "Me fale uma palavra aleatoria que contenha somente 5 letras, a mensagem deverá ser somente a palavra, como neste exemplo: bingo",
     })
+    console.log( await response)
+    setword( response.text? response.text : "")
     console.log(response.text)
-    setword(response.text);
     }
 
     
